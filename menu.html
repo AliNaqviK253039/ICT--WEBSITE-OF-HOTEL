@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Delights - Our Menu</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            800: '#4e311f',
+                            900: '#3a2315',
+                        },
+                        cream: '#F5F0E6',
+                        gold: '#D4AF37',
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+
+        body {
+            background-color: #4e311f;
+            color: #F5F0E6;
+            min-height: 100vh;
+        }
+        /* learned from youtube*/
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.03) 10%, transparent 10%),
+                radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.03) 10%, transparent 10%);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-image {
+            float: right;
+            width: 400px;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            
+            border: 2px dashed #3a2315; 
+        }
+
+        @media (max-width: 768px) {
+            .floating-image {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center p-4 md:p-8">
+
+    <div class="bg-pattern"></div>
+
+    <main class="w-full max-w-4xl bg-coffee-900/40 p-8 rounded-xl border border-white/10 shadow-2xl backdrop-blur-sm">
+        
+        <header class="text-center mb-10 border-b border-gold/30 pb-6">
+            <h1 class="font-serif text-4xl md:text-5xl text-gold font-bold drop-shadow-md">
+                Explore Our Delicious Menu
+            </h1>
+        </header>
+
+        <div class="clearfix">
+            <img src="food.png" 
+                 alt="Delicious Gourmet Dish" 
+                 class="floating-image rounded-lg shadow-lg">
+
+            <!-- Menu Contents -->
+            <div class="space-y-8">
+                
+                <!-- Category 1 -->
+                <section>
+                    <h2 class="font-serif text-2xl text-cream border-l-4 border-gold pl-3 mb-4">
+                      <span class="text-gold font-semibold">Appetizers</span>  
+                    </h2>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-cream/80 font-light pl-2">
+                        <li><span class="font-semibold text-white">Garlic Bread</span> - Toasted baguette with herb butter</li>
+                        <li><span class="font-semibold text-white">Bruschetta</span> - Tomatoes, basil, and balsamic glaze</li>
+                        <li><span class="font-semibold text-white">Stuffed Mushrooms</span> - Baked with cheese and spinach</li>
+                    </ul>
+                </section>
+<hr class="font-bold border-gold">
+                <!-- Category 2 -->
+                <section>
+                    <h2 class="font-serif text-2xl text-cream border-l-4 border-gold pl-3 mb-4">
+                       <span class="text-gold font-semibold">Main Course</span> 
+                    </h2>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-cream/80 font-light pl-2">
+                        <li><span class="font-semibold text-white">Grilled Salmon</span> - Served with asparagus and lemon butter</li>
+                        <li><span class="font-semibold text-white">Filet Mignon</span> - Tender steak with garlic mash</li>
+                        <li><span class="font-semibold text-white">Truffle Pasta</span> - Handmade pasta in creamy truffle sauce</li>
+                        <li><span class="font-semibold text-white">Roasted Chicken</span> - Herb-crusted with root vegetables</li>
+                    </ul>
+                </section>
+<hr class="font-bold border-gold">
+                <!-- Category 3 -->
+                <section>
+                    <h2 class="font-serif text-2xl text-cream border-l-4 border-gold pl-3 mb-4">
+                        <span class="text-gold font-semibold">Desserts</span>
+                    </h2>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-cream/80 font-light pl-2">
+                        <li><span class="font-semibold text-white">Tiramisu</span> - Classic Italian coffee-flavored dessert</li>
+                        <li><span class="font-semibold text-white">Chocolate Lava Cake</span> - Warm gooey chocolate center</li>
+                        <li><span class="font-semibold text-white">Cheesecake</span> - New York style with berry compote</li>
+                    </ul>
+                </section>
+                <hr class="font-bold border-gold">
+            </div>
+        </div>
+        <footer class="mt-16 text-center text-gold font-bold">We only use the <em class="font-bold text-cream">freshest</em>  ingredients to bring you the
+best experience!"</footer>
+
+        <div class="mt-12 text-center border-t border-white/10 pt-8">
+            <a href="index.html" class="inline-flex items-center gap-2 text-gold hover:text-white transition-colors duration-300 font-serif text-lg font-bold border border-gold hover:border-white px-6 py-2 rounded-full no-underline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                Back to Home
+            </a>
+        </div>
+
+    </main>
+</body>
+</html>
